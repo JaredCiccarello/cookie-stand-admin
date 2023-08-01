@@ -1,19 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .container {
   background-color: #86EEAC;
   padding: 2rem;
   border-radius: 1rem;
   margin-top: 2rem;
 }
+
 h1 {
   color: #333;
   font-size: 2rem;
 }
+
 form {
   margin-top: 2rem;
 }
+
 input {
   width: 100%;
   padding: 1rem;
@@ -21,17 +25,20 @@ input {
   border: 1px solid #ccc;
   margin-bottom: 1rem;
 }
+
 button {
   background-color: #008080;
-  color: #fff;
-  font-size: 1rem;
+  color: #000; /* Change the text color to black */
+  font-size: 5rem;
   padding: 1rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; Remove the border-radius */
   cursor: pointer;
 }
+
 .btn-primary {
   background-color: #21C45D;
 }
+
 footer {
   position: fixed; 
   bottom: 0; 
@@ -40,7 +47,7 @@ footer {
   background-color: #38A169;
   padding: 1rem;
   font-size: 1rem;
-  color: #333;
+  color: #000; /* Change the text color to black */
   text-align: left;
   width: 100%; 
 }

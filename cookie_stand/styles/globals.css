@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  background-color: #d1eaf3;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #008080;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #005a5a;
+}

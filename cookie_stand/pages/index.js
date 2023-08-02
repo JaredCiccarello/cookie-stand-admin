@@ -1,4 +1,12 @@
 import Head from 'next/head';
+// import { replies } from "@/data";
+// import { useState } from "react";
+
+// import Header from "@/components/Header";
+// import Footer from "@/components/Footer";
+// import CreateForm from "@/components/CreateForm";
+// import QuestionForm from "@/components/QuestionForm";
+import ReportTable from "@/components/ReportTable";
 
 export default function Home() {
   return (
@@ -27,7 +35,7 @@ export default function Home() {
             <input type="number" name="max_customers_per_hour" id="max_customers_per_hour" className="form-control" />
           </div>
           <div className="flex flex-col sm:col-span-1 mt-2"> {/* Add mt-2 here */}
-            <label htmlFor="average_cookies_per_sale" className="block w-full mb-6 text-center">Average Cookies per Sale</label>
+            <label htmlFor="average_cookies_per_sale" className="block w-full mb-1 text-center">Average Cookies per Sale</label>
             <input type="number" name="average_cookies_per_sale" id="average_cookies_per_sale" className="form-control" />
           </div>
           <div className="flex items-center justify-center sm:col-span-2">
@@ -35,8 +43,10 @@ export default function Home() {
           </div>
         </form>
       </main>
+        <ReportTable>
 
-        <p className="mt-10 text-3xl text-center">Report Table Coming Soon...</p>
+        </ReportTable>
+        {/* <p className="mt-10 text-3xl text-center">Report Table Coming Soon...</p> */}
       <footer className="p-4 text-left bg-green-500 mt-10rem">
         &copy; {new Date().getFullYear()} Cookie Stand Admin. All rights reserved.
       </footer>

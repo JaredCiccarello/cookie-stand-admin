@@ -1,9 +1,17 @@
+import { useState } from "react";
 import Head from '@/components/Head/';
 import Header from '@/components/Header';
-import Main from '@/components/Main';
-import Footer from '@/components/Footer';
+import { hours } from '../data';
+import Footer from './Footer';
+import Main from './Main';
 
-export default function Home({ locations = 0 }) {
+export default function Home({ locations = 100 }) {
+  const [cookieStandData, setCookieStandData] = useState([]);
+
+  const handleFormSubmit = (formData) => {
+    setCookieStandData([...cookieStandData, formData]);
+  };
+
   return (
     <div>
       {/* { Head } */}
@@ -11,12 +19,12 @@ export default function Home({ locations = 0 }) {
 
       {/* Header */}
       <Header />
-
+      
       {/* Main */}
-      <Main />
+      <Main onFormSubmit={handleFormSubmit} data={cookieStandData} />
 
       {/* Footer */}
-      <Footer />
+      <Footer locations={cookieStandData.length} />
     </div>
   )
 }

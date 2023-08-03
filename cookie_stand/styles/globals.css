@@ -8,89 +8,50 @@
   border-radius: 1rem;
   margin-top: 2rem;
 }
-
 h1 {
   color: #333;
   font-size: 2rem;
 }
-
+h2 {
+  font-weight: bold;
+}
 form {
   margin-top: 2rem;
+  font-weight: bold;
+  font-size: 18px;
 }
-
 input {
   width: 100%;
   padding: 1rem;
-  border-radius: 0.5rem;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
 }
-
 button {
   background-color: #008080;
-  color: #000; /* Change the text color to black */
-  font-size: 5rem;
+  color: #fff;
+  font-size: 1rem;
   padding: 1rem;
-  /* border-radius: 0.5rem; Remove the border-radius */
   cursor: pointer;
 }
-
 .btn-primary {
   background-color: #21C45D;
+  color: black;
+  font-weight: bold;
+  width: 300px;
+  height: 100px;
+  font-size: 20px;
+  padding: 10px;
 }
-
 footer {
   position: fixed; 
   bottom: 0; 
   left: 0; 
   right: 0; 
-  background-color: #38A169;
+  background-color: #38A169; 
   padding: 1rem;
   font-size: 1rem;
-  color: #000; /* Change the text color to black */
+  font-weight: bold;
+  color: #333;
   text-align: left;
-  width: 100%; 
-}
-
-
-
-
-.table-container {
-  background-color: #86EEAC;
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-top: 2rem;
-}
-
-.table-container table {
   width: 100%;
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-
-.table-container th,
-.table-container td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-}
-
-.table-container th {
-  background-color: #21C45D;
-  color: #fff;
-}
-
-.table-container td.p-2 {
-  padding: 0.75rem;
-}
-
-.table-container .text-center {
-  text-align: center;
-}
-
-.table-container .btn-primary {
-  background-color: #008080;
-  color: #000; /* Change the text color to black */
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  cursor: pointer;
 }

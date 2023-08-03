@@ -1,8 +1,9 @@
 import CreateForm from '@/components/CreateForm';
 import ReportTable from '@/components/ReportTable';
-import  hours  from '../data'; // Make sure to import 'hours' correctly
+import  hours  from '../hours'; // Make sure to import 'hours' correctly
 
 export default function Main({onFormSubmit, data} ) {
+  
 
 
   return (
@@ -16,7 +17,7 @@ export default function Main({onFormSubmit, data} ) {
 
       {/* Render the table only if there is data */}
       {data.length > 0 ? (
-        <ReportTable datahours={hours} />
+        <ReportTable datahours={hours} data={data} />
       ) : (
         // Show the "No Cookie Stands Available..." message when there is no data
         <p className="mt-4 text-3xl text-center" style={{ fontFamily: 'Arial' }}>

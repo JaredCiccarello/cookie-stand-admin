@@ -1,7 +1,7 @@
 import React from 'react';
-import { hours } from '../data'; // Make sure to import 'hours' correctly
 
-export default function Table({ data }) {
+
+export default function ReportTable({ datahours }) {
   const hours = Array.from({ length: 13 }, (_, index) => {
     if (index === 0) return 'Location';
     else if (index <= 6) return `${index + 5}am`;
@@ -10,7 +10,7 @@ export default function Table({ data }) {
 
   const calculateTotalCookiesPerHour = (hourIndex) => {
     let total = 0;
-    data.forEach((entry) => {
+    hours.forEach((entry) => {
       // Simulate the number of customers for this hour
       const customersThisHour = Math.floor(
         Math.random() * (entry.maxCust - entry.minCust + 1) + entry.minCust
@@ -23,7 +23,7 @@ export default function Table({ data }) {
 
   const calculateTotalCookiesPerLocation = (location) => {
     let total = 0;
-    data.forEach((entry) => {
+    hours.forEach((entry) => {
       if (entry.location === location) {
         total += (entry.avgCookie * (entry.maxCust + entry.minCust)) / 2;
       }
@@ -33,7 +33,7 @@ export default function Table({ data }) {
 
   return (
     <>
-      {data.length > 0 && (
+      {hours.length > 0 && (
         <table className="w-1/2 mx-auto my-4 border">
           <thead>
             <tr>
@@ -46,7 +46,7 @@ export default function Table({ data }) {
             </tr>
           </thead>
           <tbody>
-            {data.map((entry, index) => (
+            {hours.map((entry, index) => (
               <tr
                 key={index}
                 className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}

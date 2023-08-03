@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
 import CreateForm from '@/components/CreateForm';
 import ReportTable from '@/components/ReportTable';
+import  hours  from '../data'; // Make sure to import 'hours' correctly
 
-export default function Main() {
-  // Define the onFormSubmit function here or pass it as a prop from a parent component
-  const onFormSubmit = (formData) => {
-    // Handle form submission logic here
-    // For example, you can update the 'data' state with the new entry
-    console.log('Form submitted:', formData);
-  };
+export default function Main({onFormSubmit, data} ) {
 
-  // Define the 'data' state here and initialize it with an empty array
-  const [data, setData] = useState([]);
 
   return (
     <>
@@ -24,7 +16,7 @@ export default function Main() {
 
       {/* Render the table only if there is data */}
       {data.length > 0 ? (
-        <ReportTable data={data} />
+        <ReportTable datahours={hours} />
       ) : (
         // Show the "No Cookie Stands Available..." message when there is no data
         <p className="mt-4 text-3xl text-center" style={{ fontFamily: 'Arial' }}>
